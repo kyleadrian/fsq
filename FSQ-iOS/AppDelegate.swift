@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Pilgrim
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        PilgrimManager.shared().configure(withConsumerKey: K.fsqKey, secret: K.fsqSecret, delegate: self as? PilgrimManagerDelegate, completion: nil)
+        
         return true
     }
 
@@ -33,5 +34,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate : PilgrimManagerDelegate {
+    func pilgrimManager(_ pilgrimManager: PilgrimManager, handle visit: Visit) {
+        print("\(visit.hasDeparted ? "Departure from:" : "Arrival at:")\(visit.venue?.name ?? "Unknown venue") Added a pilgrim visit at \(visit.displayName)")
+    }
+    
+    func pilgrimManager(_ pilgrimManager: PilgrimManager, handleBackfill visit: Visit) {
+        print("Backfill \(visit.hasDeparted ? "Departure from:" : "Arrival at:")\(visit.venue?.name ?? "Unknown venue") Added a pilgrim backfill visit at \(visit.displayName)")
+    }
+    
+    func pilgrimManager(_ pilgrimManager: PilgrimManager, handle geofenceEvents: [GeofenceEvent]) {
+        geofenceEvents.forEach { geofenceEvent in
+          print(geofenceEvent)
+        }
+    }
 }
 
