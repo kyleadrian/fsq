@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     
     var locationManager = CLLocationManager()
+    var foursquareManager = FoursquareManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,5 +41,8 @@ class ViewController: UIViewController {
     PilgrimManager.shared().visitTester?.fireTestVisit(confidence: .medium, type: .venue, departure: false)
     }
     
+    @IBAction func findVenuesButtonPressed(_ sender: UIButton) {
+        foursquareManager.getVenues()
+    }
 }
 

@@ -11,4 +11,5 @@ import Foundation
 struct K {
    static let fsqKey: String = "EJSNJHR22OGG3BYSNDAPDELV1OWKFABVIDDA4Y4FWJEV3DWL"
    static let fsqSecret: String = "25XZYTSQWA4KZKNJKXWEKHJOHPOYYBWCABHQNAD00XOONPMI"
+   static let v: String = "20180323"
 }

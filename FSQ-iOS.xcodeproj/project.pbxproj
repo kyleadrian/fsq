@@ -14,6 +14,8 @@
 		2735BAE5237D96E700EFA304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2735BAE4237D96E700EFA304 /* Assets.xcassets */; };
 		2735BAE8237D96E700EFA304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2735BAE6237D96E700EFA304 /* LaunchScreen.storyboard */; };
 		2735BAF0237D986B00EFA304 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735BAEF237D986B00EFA304 /* Constants.swift */; };
+		2788F230237DFBA4009C4926 /* FoursquareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788F22F237DFBA4009C4926 /* FoursquareManager.swift */; };
+		2788F232237EFB16009C4926 /* VenueData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2788F231237EFB16009C4926 /* VenueData.swift */; };
 		47FEA113EC70A84087FB02F3 /* Pods_FSQ_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3D59D65CC559C9341C6E2C /* Pods_FSQ_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		2735BAE7237D96E700EFA304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2735BAE9237D96E700EFA304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2735BAEF237D986B00EFA304 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2788F22F237DFBA4009C4926 /* FoursquareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareManager.swift; sourceTree = "<group>"; };
+		2788F231237EFB16009C4926 /* VenueData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueData.swift; sourceTree = "<group>"; };
 		2A3D129B2608E0D3E99584C5 /* Pods-FSQ-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSQ-iOS.release.xcconfig"; path = "Target Support Files/Pods-FSQ-iOS/Pods-FSQ-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		93F656FEDD1F3138C5D70BF7 /* Pods-FSQ-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSQ-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FSQ-iOS/Pods-FSQ-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BD3D59D65CC559C9341C6E2C /* Pods_FSQ_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSQ_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,16 +69,42 @@
 		2735BADA237D96E000EFA304 /* FSQ-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2788F22C237DF9A5009C4926 /* Model */,
+				2788F22D237DF9B2009C4926 /* View */,
+				2788F22E237DF9BC009C4926 /* Controller */,
 				2735BADB237D96E000EFA304 /* AppDelegate.swift */,
 				2735BADD237D96E000EFA304 /* SceneDelegate.swift */,
-				2735BADF237D96E000EFA304 /* ViewController.swift */,
-				2735BAE1237D96E100EFA304 /* Main.storyboard */,
 				2735BAE4237D96E700EFA304 /* Assets.xcassets */,
 				2735BAE6237D96E700EFA304 /* LaunchScreen.storyboard */,
 				2735BAE9237D96E700EFA304 /* Info.plist */,
 				2735BAEF237D986B00EFA304 /* Constants.swift */,
 			);
 			path = "FSQ-iOS";
+			sourceTree = "<group>";
+		};
+		2788F22C237DF9A5009C4926 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2788F22F237DFBA4009C4926 /* FoursquareManager.swift */,
+				2788F231237EFB16009C4926 /* VenueData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2788F22D237DF9B2009C4926 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2735BAE1237D96E100EFA304 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2788F22E237DF9BC009C4926 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2735BADF237D96E000EFA304 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		89875B54D0BB1ED9BE591A28 /* Pods */ = {
@@ -209,8 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2788F230237DFBA4009C4926 /* FoursquareManager.swift in Sources */,
 				2735BAE0237D96E000EFA304 /* ViewController.swift in Sources */,
 				2735BADC237D96E000EFA304 /* AppDelegate.swift in Sources */,
+				2788F232237EFB16009C4926 /* VenueData.swift in Sources */,
 				2735BADE237D96E000EFA304 /* SceneDelegate.swift in Sources */,
 				2735BAF0237D986B00EFA304 /* Constants.swift in Sources */,
 			);
